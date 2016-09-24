@@ -221,11 +221,13 @@ Run `sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"`
 
 ## Update hostapd
 
-`wget https://github.com/GlamCocks/server-configuration/raw/master/hostapd
+```
+wget https://github.com/GlamCocks/server-configuration/raw/master/hostapd
 sudo mv /usr/sbin/hostapd /usr/sbin/hostapd.ORIG
 sudo mv hostapd /usr/sbin
 sudo chown root:root /usr/sbin/hostapd
-sudo chmod 755 /usr/sbin/hostapd`
+sudo chmod 755 /usr/sbin/hostapd
+```
 
 ## Remove WPA-Supplicant
 
