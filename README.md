@@ -218,3 +218,29 @@ net.ipv6.conf.all.forwarding=1
 ```
 
 Run `sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"` 
+
+## Update hostapd
+
+`wget https://github.com/GlamCocks/server-configuration/raw/master/hostapd`
+`sudo mv /usr/sbin/hostapd /usr/sbin/hostapd.ORIG`
+`sudo mv hostapd /usr/sbin`
+`sudo chown root:root /usr/sbin/hostapd`
+`sudo chmod 755 /usr/sbin/hostapd`
+
+## Remove WPA-Supplicant
+
+`sudo mv /usr/share/dbus-1/system-services/fi.epitest.hostap.WPASupplicant.service ~/`
+
+## Test
+
+Reboot and then `sudo /usr/sbin/hostapd /etc/hostapd/hostapd.conf`
+
+## Creating service
+
+`sudo service hostapd start`
+`sudo service isc-dhcp-server start`
+
+You can check the status with `sudo service hostapd status` or `sudo service isc-dhcp-server status`
+
+`sudo update-rc.d hostapd enable`
+`sudo update-rc.d isc-dhcp-server enable`
