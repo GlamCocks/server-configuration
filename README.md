@@ -237,10 +237,14 @@ Reboot and then `sudo /usr/sbin/hostapd /etc/hostapd/hostapd.conf`
 
 ## Creating service
 
-```sudo service hostapd start
-sudo service isc-dhcp-server start```
+```
+sudo service hostapd start
+sudo service isc-dhcp-server start
+```
 
 You can check the status with `sudo service hostapd status` or `sudo service isc-dhcp-server status`
 
-```sudo update-rc.d hostapd enable
-sudo update-rc.d isc-dhcp-server enable```
+```
+sudo update-rc.d hostapd enable
+sudo update-rc.d isc-dhcp-server enable
+```
